@@ -1,0 +1,66 @@
+@import "reset.css";
+
+#container {
+    margin-top: 0;
+    background-color: #333;
+    height: 85px;
+    display: flex;
+
+}
+
+.wrapper {
+    border: 1px solid white;
+}
+
+.icon {
+    color: white;
+    float: left;
+    margin:  30px 0 30px 30px ;
+    cursor: pointer;
+}
+#logo{
+    width: 250px;
+    margin-left: 10px;
+}
+form input[type="text"] {
+    height: 32px;
+    width: 600px;
+}
+
+form button {
+    height: 36px;
+    width: 40px;
+    background-color: white;
+    border: 0;
+    margin-left: 0;
+}
+form button:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+#form-wrapper{
+    display: block;
+    text-align: center;
+    margin-left: 150px;
+}
+.form {
+margin: 25px 40px;
+}
+.text{
+    color: white;
+    cursor: pointer;
+    margin-top: 46px;
+    margin-left: 10px;
+}
+#account-wrapper{
+    width: 200px;
+    display: flex;
+    margin-left: 150px;
+}
+#cart-wrapper .icon{
+    font-size: 25px;
+    margin-top: 40px;
+}
+#cart-wrapper{
+    width: 200px;
+}
