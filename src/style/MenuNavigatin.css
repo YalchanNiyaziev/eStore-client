@@ -1,0 +1,34 @@
+@import "reset.css";
+
+#navigation-container {
+    background-color: white;
+    color: black;
+    width: 320px;
+}
+
+.menu-nav-icon {
+    margin: 10px 5px 10px 10px;
+    /*border: 2px solid darkgoldenrod;*/
+    width: 25px;
+    font-size: 18px;
+}
+
+.nav-element {
+    cursor: pointer;
+    /*border: 1px solid red;*/
+    display: flex;
+    height: 40px;
+}
+.nav-element:hover{
+    border: 1px solid lightgrey;
+    color: orangered;
+}
+.menu-nav-text {
+    /*border: 1px solid blue;*/
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 15px;
+    padding-top: 10px;
+
+
+}

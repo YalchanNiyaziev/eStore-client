@@ -1,13 +1,9 @@
-@import "reset.css";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 #footer-container {
     color: white;
     background-color: #333;
     height: 270px;
     display: flex;
     justify-content: center;
-    font-family: 'Open Sans',sans-serif;
 }
 
 .footer-element-container {
