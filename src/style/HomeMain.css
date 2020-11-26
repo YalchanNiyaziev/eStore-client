@@ -1,0 +1,6 @@
+@import "reset.css";
+
+#main-container{
+    height: 900px;
+    background-color: greenyellow;
+}

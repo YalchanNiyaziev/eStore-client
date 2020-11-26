@@ -1,8 +1,9 @@
 import React from 'react';
+import '../style/HomeMain.css'
 
 function Main() {
     return(
-        <div>
+        <div id="main-container">
 
         </div>
     )

@@ -1,0 +1,59 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+#footer-container {
+    color: white;
+    background-color: #333;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.footer-element-container {
+    border: 1px solid white;
+    width: 400px;
+    margin-top: 60px;
+
+}
+
+.footer-element-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-element-subItem{
+    text-align: left;
+    margin: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.footer-element-subItem:hover{
+    color: #cccccc;
+}
+#know-first-info{
+    text-align: justify;
+    border: 1px solid white;
+    margin: 0 40px  40px  0 ;
+    font-size: 15px;
+}
+#know-first-form{
+    text-align: left;
+}
+#email-box{
+    height: 33px;
+    border-radius: 2px 0 0 2px;
+    border:none;
+    box-shadow: none    ;
+
+}
+#know-first-form button{
+    height: 35px;
+    border-radius:0 2px 2px 0;
+    border:none;
+    box-shadow: none;
+    background-color: orangered;
+    color: white;
+}

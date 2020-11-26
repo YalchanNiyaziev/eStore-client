@@ -1,11 +1,14 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-#container {
+#header-container {
     margin-top: 0;
     background-color: #333;
-    height: 85px;
+    height: 60px;
     display: flex;
-
+    position: sticky;
+    top: 0;
+    font-family: 'Open Sans',sans-serif;
 }
 
 .wrapper {
@@ -15,26 +18,38 @@
 .icon {
     color: white;
     float: left;
-    margin:  30px 0 30px 30px ;
+    margin: 20px ;
+    cursor: pointer;
+}
+.icon-user{
+    color: white;
+    float: left;
+    margin: 20px 0 20px 20px;
     cursor: pointer;
 }
 #logo{
     width: 250px;
     margin-left: 10px;
 }
-form input[type="text"] {
+#search-input {
     height: 32px;
     width: 600px;
+    border: 0;
+    border-radius: 2px 0 0 2px;
 }
 
-form button {
-    height: 36px;
+#search-button {
+    padding: 0;
+    height: 34px;
     width: 40px;
     background-color: white;
-    border: 0;
     margin-left: 0;
+    box-shadow: none;
+    border: 0;
+    border-radius:0 2px 2px 0;
+
 }
-form button:hover {
+#search-button:hover {
     background-color: dodgerblue;
     color: white;
 }
@@ -44,12 +59,12 @@ form button:hover {
     margin-left: 150px;
 }
 .form {
-margin: 25px 40px;
+margin: 15px 40px;
 }
 .text{
     color: white;
     cursor: pointer;
-    margin-top: 46px;
+    margin-top: 30px;
     margin-left: 10px;
 }
 #account-wrapper{
@@ -57,10 +72,12 @@ margin: 25px 40px;
     display: flex;
     margin-left: 150px;
 }
-#cart-wrapper .icon{
+
+#cart-wrapper .icon-user{
     font-size: 25px;
-    margin-top: 40px;
+    margin-top: 25px;
 }
+
 #cart-wrapper{
     width: 200px;
 }
