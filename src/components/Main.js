@@ -43,9 +43,9 @@ function createMenuElements() {
         icon: faCamera,
         text: "Фото и видео"
     };
-    const homeElement={
-        icon:faHome,
-        text:"Дом и градина"
+    const homeElement = {
+        icon: faHome,
+        text: "Дом и градина"
     }
     const automativeElement = {
         icon: faCar,
@@ -73,7 +73,17 @@ function Main() {
     const menuNavElements = createMenuElements();
     return (
         <div id="main-container">
-            <MenuNavigation menuElements={menuNavElements}/>
+            <div id="main-top-container">
+                <div id="main-menu-nav-text">Категории продукти</div>
+                <div id="picture-menu-nav-container">
+                    <div id="main-top-nav-container">
+                        <MenuNavigation menuElements={menuNavElements}/>
+                    </div>
+                    <div id="main-pictures-container">
+                        <img></img>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

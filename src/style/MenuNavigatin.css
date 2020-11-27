@@ -4,6 +4,8 @@
     background-color: white;
     color: black;
     width: 320px;
+    /*margin-top:50px ;*/
+    display: inline-block;
 }
 
 .menu-nav-icon {
@@ -29,6 +31,5 @@
     word-wrap: break-word;
     font-size: 15px;
     padding-top: 10px;
-
-
 }
+
