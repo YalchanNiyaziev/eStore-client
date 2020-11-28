@@ -1,0 +1,23 @@
+#product-filters-container{
+    font-size: 20px;
+}
+#brands-container{
+    border: 1px solid blue;
+    text-align: left;
+    max-width: 300px;
+}
+.brand-checkbox{
+    margin-right: 7px;
+}
+.brand-container-elem{
+    border: 1px solid green;
+    margin: 5px;
+}
+
+#price-container{
+    border: 1px solid purple;
+    max-width: 300px;
+    margin-top: 10px;
+    color: red;
+
+}
