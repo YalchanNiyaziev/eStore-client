@@ -1,0 +1,32 @@
+#products-list-header-container {
+    background-color: white;
+}
+
+#products-list-header-container p {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    border: 1px solid green;
+    padding: 10px;
+}
+
+#select-form-container {
+    font-size: 20px;
+    display: flex;
+    border: 1px solid black;
+    padding: 10px 0;
+}
+
+.form-select {
+    margin-right: 30px;
+    border: 1px solid red;
+}
+
+.form-select label {
+    padding-right: 15px;
+}
+
+.form-select select {
+    padding: 5px;
+    min-width: 250px;
+}

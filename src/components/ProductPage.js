@@ -1,6 +1,8 @@
 import React from 'react';
 import ProductFilters from "./ProductFilters";
 import '../style/ProductPage.css'
+import ProductItemsHeader from "./ProductItemsHeader";
+import ProductItemsContainer from "./ProductItemsContainer";
 
 export default class ProductPage extends React.Component {
 
@@ -15,28 +17,105 @@ export default class ProductPage extends React.Component {
             specificFilters: [],
             pages: 0,
             category: '',
+            products: []
         }
     }
 
     componentDidMount() {
+        const p1 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/30533/30532919/images/res_7e123177908c5d321974713fa1b6973f.jpg",
+            name: "Смартфон Ulefone Note 9P, 64GB, 4G, Black",
+            price: 219.99,
+            alt: "a phone "
+        }
+        const p2 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/30533/30532919/images/res_7e123177908c5d321974713fa1b6973f.jpg",
+            name: "Смартфон Xiaomi Redmi Note 9 Pro, Dual SIM, 128GB,",
+            price: 475.99,
+            alt: "a white phone "
+        }
+        const p3 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/33382/33381513/images/res_9c502e664bde724a8f8e180bbe1582c9.jpg",
+            name: "Смартфон Apple iPhone 12, 64GB, 5G, Black",
+            price: 1799.99,
+            alt: "a Iphone "
+        }
+        const p4 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/27773/27772388/images/res_93b93954e4ca32ce8828807d454d1bb4.jpg",
+            name: "Смартфон Samsung Galaxy A51, Dual SIM, 128GB, 4GB",
+            price: 568.99,
+            alt: "a samsung phone "
+        }
+        const p5 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg",
+            name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
+            price: 393.99,
+            alt: "a China phone "
+        }
+        const p6 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/27773/27772388/images/res_93b93954e4ca32ce8828807d454d1bb4.jpg",
+            name: "Смартфон Samsung Galaxy A51, Dual SIM, 128GB, 4GB",
+            price: 568.99,
+            alt: "a samsung phone "
+        }
+        const p7 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg",
+            name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
+            price: 393.99,
+            alt: "a China phone "
+        }
+        const p8 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/27773/27772388/images/res_93b93954e4ca32ce8828807d454d1bb4.jpg",
+            name: "Смартфон Samsung Galaxy A51, Dual SIM, 128GB, 4GB",
+            price: 568.99,
+            alt: "a samsung phone "
+        }
+        const p9 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg",
+            name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
+            price: 393.99,
+            alt: "a China phone "
+        }
+        const p10 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/27773/27772388/images/res_93b93954e4ca32ce8828807d454d1bb4.jpg",
+            name: "Смартфон Samsung Galaxy A51, Dual SIM, 128GB, 4GB",
+            price: 568.99,
+            alt: "a samsung phone "
+        }
+        const p11 = {
+            imgUrl: "https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg",
+            name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
+            price: 393.99,
+            alt: "a China phone "
+        }
+        const productCollection = [];
+        productCollection.push(p1);
+        productCollection.push(p2);
+        productCollection.push(p3);
+        productCollection.push(p4);
+        productCollection.push(p5);
+        productCollection.push(p6);
+        productCollection.push(p7);
+        productCollection.push(p8);
+        productCollection.push(p9);
+        productCollection.push(p10);
+        productCollection.push(p11);
+
         console.log('make ajax and update state');
         this.setState({
                 brands: ['LG', 'Samsung', 'Sony', 'AEG', 'Panasonic', 'Arcelik', 'kjbfnkjdfbvdfkvb', 'hsd       dddddssasdasdadzxzzhsgshs jagssgs lllk'],
                 priceMin: 900,
                 priceMax: 1500,
                 priceRangeStart: 900,
-                priceRangeEnd: 1500
+                priceRangeEnd: 1500,
+                category: 'Мобилни телефони',
+                products: productCollection
             }
         )
     }
 
     updatePriceRange(newRangeStartPrice, newRangeEndPrice) {
         this.setState({priceRangeStart: newRangeStartPrice, priceRangeEnd: newRangeEndPrice})
-    }
-
-    updateOnlyOnePriceRange(newPriceRange) {
-        console.log(newPriceRange);
-        this.setState(newPriceRange);
     }
 
     render() {
@@ -49,8 +128,14 @@ export default class ProductPage extends React.Component {
                         priceMax={this.state.priceMax}
                         priceRangeStart={this.state.priceRangeStart}
                         priceRangeEnd={this.state.priceRangeEnd}
-                        brands={this.state.brands}/>
+                        brands={this.state.brands}
+                        />
                 </div>
+                <div id="products-list-container">
+                    <ProductItemsHeader categoryName={this.state.category}/>
+                    <ProductItemsContainer products={this.state.products}/>
+                </div>
+
             </div>
         );
     }

@@ -1,0 +1,8 @@
+#products-items-container{
+    /*border: 5px solid black;*/
+    margin-top: 10px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+}

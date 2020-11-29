@@ -1,15 +1,23 @@
-#products-page-container{
+#products-page-container {
     border: 1px solid red;
     padding: 20px;
     width: 100%;
     min-height: 700px;
     background-color: #e9ebee;
+    display: flex;
 }
 
-#filters-container{
+#filters-container {
     /*background-color: white;*/
     float: left;
-    display: inline-block;
+    /*display: inline-block;*/
     border: 5px solid black;
+    padding: 5px;
+}
+
+#products-list-container {
+    margin: 0 10px 0 10px;
+    border: 5px solid orangered;
+    width: 75%;
     padding: 5px;
 }

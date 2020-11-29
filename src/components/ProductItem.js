@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../style/ProductItem.css';
 
 export default function ProductItem(props) {
     return (
@@ -9,14 +10,14 @@ export default function ProductItem(props) {
                 </div>
             </div>
             <div className="product-card-mid">
-                <div className="product-card-name">
+                <p className="product-card-name">
                     {props.product.name}
-                </div>
+                </p>
             </div>
             <div className="product-card-btn">
-                <div className="product-card-btn-price">
-                    {props.product.price}
-                </div>
+                <p className="product-card-btn-price">
+                    {props.product.price}лв
+                </p>
                 <div className="product-card-btn-button">
                     <form className="add-to-cart-form">
                         <button className="add-to-cart-button" type="button">Добави в количка</button>
