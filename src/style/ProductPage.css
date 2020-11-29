@@ -3,4 +3,13 @@
     padding: 20px;
     width: 100%;
     min-height: 700px;
+    background-color: #e9ebee;
+}
+
+#filters-container{
+    /*background-color: white;*/
+    float: left;
+    display: inline-block;
+    border: 5px solid black;
+    padding: 5px;
 }

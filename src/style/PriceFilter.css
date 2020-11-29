@@ -1,0 +1,11 @@
+.price-range-box{
+    /*display: inline;*/
+    width: 50%;
+    margin: 10px 2px 2px 2px;
+}
+#price-range-box-container{
+    display: flex;
+}
+#slider{
+    color: orangered;
+}
