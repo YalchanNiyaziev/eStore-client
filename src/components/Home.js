@@ -9,8 +9,8 @@ export default class Home extends React.Component {
         return (
             <>
                 <AppHeader/>
-                {/*<Main/>*/}
-                <ProductPage/>
+                <Main/>
+                {/*<ProductPage/>*/}
                 <AppFooter/>
             </>
         );
