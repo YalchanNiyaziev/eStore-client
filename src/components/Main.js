@@ -13,6 +13,7 @@ import {faCar} from "@fortawesome/free-solid-svg-icons/faCar";
 import {faHome} from "@fortawesome/free-solid-svg-icons/faHome";
 import SubMenu from "./SubMenu";
 
+
 function createMenuElements() {
     const menuNavElements = [];
     const phoneAndTabletsElement = {
@@ -74,9 +75,35 @@ export default class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isSubmenuAccessible: false
+            isSubmenuAccessible: false,
+            pictureId: [1, 2, 3, 4],
+            homePictures: [
+                {
+                    url: "https://www.w3schools.com/howto/img_nature_wide.jpg",
+                    alt: "phone image"
+                },
+                {
+                    url: "https://www.w3schools.com/howto/img_snow_wide.jpg",
+                    alt: "phone image"
+                },
+                {
+                    url: "https://www.w3schools.com/howto/img_mountains_wide.jpg",
+                    alt: "phone image"
+                },
+                {
+                    url: "https://mnlopsample.files.wordpress.com/2019/08/winter-at-kifune-shrine.jpg",
+                    alt: "phone image"
+                },
+                {
+                    url: "https://www.nippon.com/en/ncommon/contents/japan-glances/187089/187089.jpg",
+                    alt: "phone image"
+                }
+            ],
+            displayPictureIndex: 0
         }
         this.updateSubMenuAccessible = this.updateSubMenuAccessible.bind(this);
+        this.handleOnClickPrevImage = this.handleOnClickPrevImage.bind(this);
+        this.handleOnClickNextImage = this.handleOnClickNextImage.bind(this);
     }
 
     renderSubMenu() {
@@ -88,27 +115,58 @@ export default class Main extends React.Component {
     updateSubMenuAccessible(newState) {
         this.setState({isSubmenuAccessible: newState})
     }
+
+    handleOnClickPrevImage(event) {
+        this.setState(prevState => {
+            if (prevState.displayPictureIndex === 0) {
+                return {
+                    displayPictureIndex: 0
+                }
+            }
+            return {
+                displayPictureIndex: prevState.displayPictureIndex - 1
+            }
+        });
+
+    }
+
+    handleOnClickNextImage(event) {
+        this.setState(prevState => {
+            if (prevState.displayPictureIndex === prevState.homePictures.length - 1) {
+                return {
+                    displayPictureIndex: 0
+                }
+            }
+            return {
+                displayPictureIndex: prevState.displayPictureIndex + 1
+            }
+        });
+    }
+
     componentDidMount() {
-    //     var i;
-    //     var slides = document.getElementsByClassName("mySlides");
-    //     var dots = document.getElementsByClassName("dot");
-    //     for (i = 0; i < slides.length; i++) {
-    //         slides[i].style.display = "none";
-    //     }
-    //     slideIndex++;
-    //     if (slideIndex > slides.length) {slideIndex = 1}
-    //     for (i = 0; i < dots.length; i++) {
-    //         dots[i].className = dots[i].className.replace(" active", "");
-    //     }
-    //     slides[slideIndex-1].style.display = "block";
-    //     dots[slideIndex-1].className += " active";
-    //     setTimeout(showSlides, 2000); // Change image every 2 seconds
-    // }
+        this.interval = setInterval(() => {
+            this.setState(prevState => {
+                if (prevState.displayPictureIndex === prevState.homePictures.length - 1) {
+                    return {
+                        displayPictureIndex: 0
+                    }
+                }
+                return {
+                    displayPictureIndex: prevState.displayPictureIndex + 1
+                }
+            });
+        }, 5000);
+    }
+
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     render() {
 
         const menuNavElements = createMenuElements();
+        console.log("render main")
         return (
             <div id="main-container">
                 <div id="main-top-container">
@@ -118,38 +176,24 @@ export default class Main extends React.Component {
                             <MenuNavigation subMenuAccess={this.updateSubMenuAccessible}
                                             menuElements={menuNavElements}/>
                         </div>
-                        <div id="main-pictures-container">
-                            {/*<div className="slideshow-container">*/}
+                        <div id="main-pictures-container"  onClick={()=>{
+                            console.log("Image selected")
+                        }}>
 
-                            {/*    <div className="mySlides fade">*/}
-                            {/*        <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" className="image"/>*/}
-                            {/*    </div>*/}
+                            <div className="slideshow-container">
+                                <a href="https://www.qries.com/">
+                                <img key={this.state.pictureId[this.state.displayPictureIndex]}
+                                     src={this.state.homePictures[this.state.displayPictureIndex].url}
+                                     className="image fade"/>
+                                </a>
+                            </div>
 
-                            {/*    <div classname="mySlides fade">*/}
-                            {/*        <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" className="image"/>*/}
-                            {/*    </div>*/}
+                                    <button id="image-button-prev"
+                                            onClick={this.handleOnClickPrevImage}>&#10094;</button>
+                                    <button id="image-button-next"
+                                            onClick={this.handleOnClickNextImage}>&#10095;</button>
 
-                            {/*    <div class="mySlides fade">*/}
-                            {/*        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" className="image"/>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="mySlides fade">*/}
-                            {/*        <img src="https://mnlopsample.files.wordpress.com/2019/08/winter-at-kifune-shrine.jpg" className="image"/>*/}
-                            {/*    </div>*/}
 
-                            {/*    <div className="mySlides fade">*/}
-                            {/*        <img src="https://www.nippon.com/en/ncommon/contents/japan-glances/187089/187089.jpg" className="image"/>*/}
-                            {/*    </div>*/}
-
-                            {/*</div>*/}
-                            {/*<br/>*/}
-
-                            {/*    <div className="picture-dots" >*/}
-                            {/*        <span className="dot"></span>*/}
-                            {/*        <span className="dot"></span>*/}
-                            {/*        <span className="dot"></span>*/}
-                            {/*        <span className="dot"></span>*/}
-                            {/*        <span className="dot"></span>*/}
-                            {/*    </div>*/}
                             {this.renderSubMenu()}
                         </div>
 

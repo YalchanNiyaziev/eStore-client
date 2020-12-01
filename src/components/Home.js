@@ -4,6 +4,7 @@ import AppFooter from "./AppFooter";
 import Main from "./Main";
 import ProductPage from "./ProductPage";
 
+
 export default class Home extends React.Component {
     render() {
         return (
@@ -11,6 +12,7 @@ export default class Home extends React.Component {
                 <AppHeader/>
                 <Main/>
                 {/*<ProductPage/>*/}
+                {/*<TodoList/>*/}
                 <AppFooter/>
             </>
         );
