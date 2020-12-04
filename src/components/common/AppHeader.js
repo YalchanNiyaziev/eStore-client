@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/AppHeader.css'
+import '../../style/common/AppHeader.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons/faBars";
 import {faSearch} from "@fortawesome/free-solid-svg-icons/faSearch";

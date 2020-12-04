@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/ProductItemsHeader.css';
+import '../../style/product/ProductItemsHeader.css';
 
 export default class ProductItemsHeader extends React.Component {
     constructor(props) {

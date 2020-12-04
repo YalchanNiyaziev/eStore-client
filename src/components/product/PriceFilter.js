@@ -1,6 +1,6 @@
 import React from 'react';
 import Nouislider from "nouislider-react";
-import '../style/PriceFilter.css'
+import '../../style/product/PriceFilter.css'
 
 export default class PriceFilter extends React.Component {
 

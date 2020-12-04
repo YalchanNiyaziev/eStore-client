@@ -2,7 +2,7 @@ import React from 'react';
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons/faShoppingCart";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMobileAlt} from "@fortawesome/free-solid-svg-icons/faMobileAlt";
-import '../style/MenuNavigatin.css'
+import '../../style/navigation/MenuNavigatin.css'
 
 
 export default function MenuNavigation(props) {

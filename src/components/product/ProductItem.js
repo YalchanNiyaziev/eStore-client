@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/ProductItem.css';
+import '../../style/product/ProductItem.css';
 
 export default function ProductItem(props) {
     return (

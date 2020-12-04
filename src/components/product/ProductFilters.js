@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/ProductFilters.css';
+import '../../style/product/ProductFilters.css';
 import "nouislider/distribute/nouislider.css";
 import BrandsFilter from "./BrandsFilter";
 import PriceFilter from "./PriceFilter";

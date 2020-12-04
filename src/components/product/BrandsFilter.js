@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/BrandsFilter.css"
+import "../../style/product/BrandsFilter.css"
 
 export default function BrandsFilter(props) {
     return(

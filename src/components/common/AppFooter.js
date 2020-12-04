@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/AppFooter.css';
+import '../../style/common/AppFooter.css';
 import FooterElement from "./FooterElement";
 
 function createFooterElementsArray(){

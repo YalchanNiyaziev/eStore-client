@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/HomeMain.css'
-import MenuNavigation from "./MenuNavigation";
+import MenuNavigation from "./navigation/MenuNavigation";
 import {faMobileAlt} from "@fortawesome/free-solid-svg-icons/faMobileAlt";
 import {faTv} from "@fortawesome/free-solid-svg-icons/faTv";
 import {faLaptop} from "@fortawesome/free-solid-svg-icons/faLaptop";
@@ -11,7 +11,7 @@ import {faTableTennis} from "@fortawesome/free-solid-svg-icons/faTableTennis";
 import {faCamera} from "@fortawesome/free-solid-svg-icons/faCamera";
 import {faCar} from "@fortawesome/free-solid-svg-icons/faCar";
 import {faHome} from "@fortawesome/free-solid-svg-icons/faHome";
-import SubMenu from "./SubMenu";
+import SubMenu from "./navigation/SubMenu";
 
 
 function createMenuElements() {

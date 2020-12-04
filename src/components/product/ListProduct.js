@@ -1,10 +1,10 @@
 import React from 'react';
 import ProductFilters from "./ProductFilters";
-import '../style/ProductPage.css'
+import '../../style/product/ListProduct.css'
 import ProductItemsHeader from "./ProductItemsHeader";
 import ProductItemsContainer from "./ProductItemsContainer";
 
-export default class ProductPage extends React.Component {
+export default class ListProduct extends React.Component {
 
     constructor(props) {
         super(props);

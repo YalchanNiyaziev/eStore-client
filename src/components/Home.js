@@ -1,8 +1,8 @@
 import React from 'react';
-import AppHeader from "./AppHeader";
-import AppFooter from "./AppFooter";
+import AppHeader from "./common/AppHeader";
+import AppFooter from "./common/AppFooter";
 import Main from "./Main";
-import ProductPage from "./ProductPage";
+import ListProduct from "./product/ListProduct";
 
 
 export default class Home extends React.Component {
@@ -10,8 +10,9 @@ export default class Home extends React.Component {
         return (
             <>
                 <AppHeader/>
-                <Main/>
-                {/*<ProductPage/>*/}
+                {/*<Main/>*/}
+                <ProductPage/>
+                {/*<ListProduct/>*/}
                 {/*<TodoList/>*/}
                 <AppFooter/>
             </>
