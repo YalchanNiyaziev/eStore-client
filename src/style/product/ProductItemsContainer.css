@@ -6,3 +6,6 @@
     flex-wrap: wrap;
     /*justify-content: center;*/
 }
+.pr-card{
+    width: 23%;
+}

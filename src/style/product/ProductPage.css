@@ -1,0 +1,41 @@
+#selected-product-container{
+    border: 2px solid blue;
+    padding: 10%;
+
+}
+
+#selected-product-main-box{
+    border: 2px solid black;
+}
+.selected-product-box-element{
+    display: inline-block;
+
+}
+#selected-product-image-box{
+    border: 2px solid purple;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+
+}
+#showed-image{
+    border: 1px solid orangered;
+    max-height: 400px;
+    max-width: 400px;
+}
+#additional-images-box{
+    border: 2px solid darkgreen;
+    padding: 5px;
+    width: 100%;
+}
+.other-images{
+    border: 1px solid blue;
+    max-height: 55px;
+    max-width: 55px;
+    margin: 5px;
+}
+#selected-product-info{
+    width: 30%;
+    border: 3px solid darkcyan;
+}
