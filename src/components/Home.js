@@ -11,6 +11,8 @@ export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            selectedItemId: 0,
+            isSelected: false,
             brands: [],
             priceMin: 0,
             priceMax: 1,
@@ -19,14 +21,17 @@ export default class Home extends React.Component {
             specificFilters: [],
             pages: 0,
             category: '',
-            products: [{
-                images: ["https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg"],
-                name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
-                price: 393.99,
-                alt: "a China phone "
-            }],
-            selectedItemId: 0,
-            isSelected: true
+            products: [
+                {
+                    images: [""],
+                    name: "",
+                    price: null,
+                    specifications: [{key: "", value: ""}],
+                    description: "",
+                    alt: ""
+                }
+            ],
+
         }
     }
 
@@ -35,56 +40,128 @@ export default class Home extends React.Component {
             images: ["https://s13emagst.akamaized.net/products/30533/30532919/images/res_7e123177908c5d321974713fa1b6973f.jpg"],
             name: "Смартфон Ulefone Note 9P, 64GB, 4G, Black",
             price: 219.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Hugfghgfawei"}, {key: "Brand", value: "Huaghfhfgfjfgjdwei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Hujjkhsssssssssjkhjkhawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a phone "
         }
         const p2 = {
             images: ["https://s13emagst.akamaized.net/products/30533/30532919/images/res_7e123177908c5d321974713fa1b6973f.jpg"],
             name: "Смартфон Xiaomi Redmi Note 9 Pro, Dual SIM, 128GB,",
             price: 475.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a white phone "
         }
         const p3 = {
             images: ["https://s13emagst.akamaized.net/products/33382/33381513/images/res_9c502e664bde724a8f8e180bbe1582c9.jpg"],
             name: "Смартфон Apple iPhone 12, 64GB, 5G, Black",
             price: 1799.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a Iphone "
         }
         const p4 = {
             images: ["https://s13emagst.akamaized.net/products/27773/27772388/images/res_93b93954e4ca32ce8828807d454d1bb4.jpg"],
             name: "Смартфон Samsung Galaxy A51, Dual SIM, 128GB, 4GB",
             price: 568.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a samsung phone "
         }
         const p5 = {
             images: ["https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg"],
             name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
             price: 393.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a China phone "
         }
         const p6 = {
             images: ["https://s13emagst.akamaized.net/products/27773/27772388/images/res_93b93954e4ca32ce8828807d454d1bb4.jpg"],
             name: "Смартфон Samsung Galaxy A51, Dual SIM, 128GB, 4GB",
             price: 568.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a samsung phone "
         }
         const p7 = {
             images: ["https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg"],
             name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
             price: 393.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a China phone "
         }
         const p8 = {
             images: ["https://s13emagst.akamaized.net/products/27773/27772388/images/res_93b93954e4ca32ce8828807d454d1bb4.jpg"],
             name: "Смартфон Samsung Galaxy A51, Dual SIM, 128GB, 4GB",
             price: 568.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a samsung phone "
 
         }
@@ -92,21 +169,48 @@ export default class Home extends React.Component {
             images: ["https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg"],
             name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
             price: 393.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a China phone "
         }
         const p10 = {
             images: ["https://s13emagst.akamaized.net/products/27773/27772388/images/res_93b93954e4ca32ce8828807d454d1bb4.jpg"],
             name: "Смартфон Samsung Galaxy A51, Dual SIM, 128GB, 4GB",
             price: 568.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a samsung phone "
         }
         const p11 = {
             images: ["https://s13emagst.akamaized.net/products/28810/28809243/images/res_065f2a05d5c0cab29b5b6d8b0d91dee3.jpg"],
             name: "Смартфон Huawei P40 Lite, Dual SIM, 128GB, 6GB RAM,",
             price: 393.99,
-            specifications: [{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"},{key:"Brand", value:"Huawei"}],
+            specifications: [{key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}, {key: "Brand", value: "Huawei"}],
+            description:"Lorem Ipsumo the leap into electronic typ60s with the release of\n" +
+                "                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing\n" +
+                "                            software like Aldus PageMaker including versions of Lorem Ipsum.ions of Lorem Ipsum.t of the\n" +
+                "                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n" +
+                "                            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make\n" +
+                "                            a type specimen book. It has survived not only five centuries, but also the leap into\n" +
+                "                            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s\n" +
+                "                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
+                "                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             alt: "a China phone "
         }
         const productCollection = [];
@@ -140,7 +244,7 @@ export default class Home extends React.Component {
             return <>
                 <ProductPage
                     products={this.state.products}
-                    selected={this.state.selectedItemId}/>
+                    selectedItem={this.state.selectedItemId}/>
             </>
         } else {
             return <>
