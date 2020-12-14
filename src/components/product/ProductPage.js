@@ -107,7 +107,7 @@ export default class ProductPage extends React.Component {
                 )}
 
             </div>
-
+        <hr/>
         </div>
     }
 

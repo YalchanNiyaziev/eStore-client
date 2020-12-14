@@ -5,6 +5,7 @@ import Main from "./Main";
 import ListProduct from "./product/ListProduct";
 import ProductPage from "./product/ProductPage";
 import ProductFilters from "./product/ProductFilters";
+import Cart from "./cart/Cart";
 
 
 export default class Home extends React.Component {
@@ -280,8 +281,9 @@ export default class Home extends React.Component {
             <>
                 <AppHeader/>
                 {/*<Main/>*/}
-                {this.displayAllOrOnlySelected()}
+                {/*{this.displayAllOrOnlySelected()}*/}
                 {/*<TodoList/>*/}
+                <Cart/>
                 <AppFooter/>
             </>
         );
