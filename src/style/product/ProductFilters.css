@@ -2,7 +2,7 @@
     font-size: 20px;
 }
 #price-container{
-    border: 1px solid purple;
+    /*border: 1px solid purple;*/
     max-width: 300px;
     margin-top: 10px;
     color: red;
@@ -11,7 +11,7 @@
     border-radius: 5px;
     padding: 10px;
     margin: 15px;
-    border: 2px solid orangered;
+    /*border: 2px solid orangered;*/
     background-color: white;
     box-shadow: none;
 }

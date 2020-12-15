@@ -1,5 +1,5 @@
 #brands-container{
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     text-align: left;
     max-width: 300px;
 }
@@ -7,6 +7,6 @@
     margin-right: 7px;
 }
 .brand-container-elem{
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     margin: 7px;
 }

@@ -6,6 +6,7 @@ import ListProduct from "./product/ListProduct";
 import ProductPage from "./product/ProductPage";
 import ProductFilters from "./product/ProductFilters";
 import Cart from "./cart/Cart";
+import {Route, Switch} from "react-router-dom";
 
 
 export default class Home extends React.Component {
@@ -229,7 +230,7 @@ export default class Home extends React.Component {
 
         console.log('make ajax and update state');
         this.setState({
-                brands: ['LG', 'Samsung', 'Sony', 'AEG', 'Panasonic', 'Arcelik', 'kjbfnkjdfbvdfkvb', 'hsd       dddddssasdasdadzxzzhsgshs jagssgs lllk'],
+                brands: ['LG', 'Samsung', 'Sony', 'AEG', 'Panasonic', 'Xaomi', 'Apple', 'Huawei'],
                 priceMin: 900,
                 priceMax: 1500,
                 priceRangeStart: 900,
@@ -279,13 +280,10 @@ export default class Home extends React.Component {
     render() {
         return (
             <>
-                <AppHeader/>
-                {/*<Main/>*/}
-                {/*{this.displayAllOrOnlySelected()}*/}
-                {/*<TodoList/>*/}
-                <Cart/>
-                <AppFooter/>
-            </>
+
+
+                {this.displayAllOrOnlySelected()}
+                   </>
         );
     }
 

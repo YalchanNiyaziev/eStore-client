@@ -26,7 +26,7 @@
 
 
 #main-top-nav-container {
-    border: 1px solid purple;
+    /*border: 1px solid purple;*/
     padding: 50px 10px 10px 10px;
     background-color: white;
 }
@@ -36,11 +36,14 @@
     background-color: white;
     color: black;
     margin: 0 10px 10px 10px;
-    border: 1px solid black;
+    text-align: left;
+    justify-content:center;
+    align-items:center;
+
 }
 
 #main-pictures-container {
-    background-color: hotpink;
+    /*background-color: hotpink;*/
     width: 1200px;
     height: 450px;
     /*padding: 10px;*/
@@ -50,7 +53,7 @@
 .slideshow-container {
     position: absolute;
     margin: auto;
-    border: 5px solid orangered;
+    /*border: 5px solid orangered;*/
     left: 0;
     top: 0;
     width: 100%;

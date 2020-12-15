@@ -20,7 +20,7 @@ export default class ListProduct extends React.Component {
                         />
                 </div>
                 <div id="products-list-container">
-                    <ProductItemsHeader categoryName={this.props.category}/>
+                    <ProductItemsHeader categoryName={this.props.categoryName}/>
                     <ProductItemsContainer
                         selectProduct={this.props.selectProduct}
                         products={this.props.products}/>

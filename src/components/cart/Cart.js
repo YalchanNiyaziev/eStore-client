@@ -388,7 +388,17 @@ export default class Cart extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div id="make-order-holder"></div>
+                    <div id="make-order-holder">
+                        <div id="cart-order-total">
+                            <p id="cart-order-total-sum-key">Общо</p>
+                            <p id="cart-order-total-sum-value">10014.99лв</p>
+                        </div>
+                        <div id="cart-make-order-button">
+                            <form>
+                                <button>Продължаване</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>)
     }

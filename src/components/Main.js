@@ -170,7 +170,9 @@ export default class Main extends React.Component {
         return (
             <div id="main-container">
                 <div id="main-top-container">
-                    <div id="main-menu-nav-text">Категории продукти</div>
+                    <div id="main-menu-nav-text">
+                        {/*<p>Категории продукти</p>*/}
+                    </div>
                     <div id="picture-menu-nav-container">
                         <div id="main-top-nav-container">
                             <MenuNavigation subMenuAccess={this.updateSubMenuAccessible}

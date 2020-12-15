@@ -1,11 +1,14 @@
 #products-items-container{
+
     /*border: 5px solid black;*/
     margin-top: 10px;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
+    background-color: #e9ebee;
     /*justify-content: center;*/
 }
 .pr-card{
     width: 23%;
+    padding: 10px;
 }

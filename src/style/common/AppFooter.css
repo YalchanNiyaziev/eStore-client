@@ -7,7 +7,7 @@
 }
 
 .footer-element-container {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     width: 400px;
     margin-top: 60px;
 
@@ -31,7 +31,7 @@
 }
 #know-first-info{
     text-align: justify;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     margin: 0 40px  40px  0 ;
     font-size: 15px;
 }
