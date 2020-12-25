@@ -1,0 +1,154 @@
+#profile-page-main-container {
+    margin: 10px;
+    border: 3px solid blue;
+    display: flex;
+    padding: 5px;
+    background-color: #e9ebee;
+    /*position: relative;*/
+    /*padding-bottom: 60px;*/
+    /*min-height: 100%;*/
+    /*position: relative;*/
+
+}
+
+#fast-nav-container {
+    border: 2px solid red;
+    width: 30%;
+    font-size: 18px;
+    color: #005eb8;
+}
+
+#profile-info-box {
+    border: 2px solid green;
+    width: 60%;
+    margin-left: 10px;
+}
+
+#profile-main-info-box {
+    border: 2px solid purple;
+    background-color: white;
+}
+
+#main-info {
+
+}
+
+.profile-box-title {
+    padding: 5px;
+    font-size: 20px;
+    border: 2px solid #133cc8;
+    text-align: left;
+    font-weight: bold;
+}
+
+#main-info-inner-box {
+    border: 2px solid cyan;
+    display: flex;
+}
+
+#profile-image-box {
+    border: 2px solid #00c805;
+    width: 20%;
+}
+
+#profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 10px 40px 10px;
+}
+
+#profile-info-text {
+    border: 2px solid #c82e23;
+    width: 80%;
+    padding-top: 20px;
+}
+
+.profile-info-row {
+    border: 2px solid black;
+    display: flex;
+    width: 60%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.profile-info-key {
+    width: 25%;
+    border: 2px solid salmon;
+    text-align: left;
+}
+
+.info-icon {
+    margin-right: 10px;
+}
+
+.profile-info-value {
+    text-align: left;
+    width: 75%;
+    border: 2px solid crimson;
+}
+
+.info-edit {
+    padding: 10px;
+}
+
+.info-edit a {
+    font-size: 18px;
+    color: #005eb8;
+    text-decoration: none;
+}
+
+#fast-nav-list-box {
+    float: right;
+    width: 60%;
+    padding: 10px 7px;
+    border: 1px solid #c0c0c0;
+    text-align: left;
+    background-color: white;
+}
+
+.fast-nav-elem {
+    cursor: pointer;
+}
+
+#profile-main-event-box {
+    border: 2px solid crimson;
+
+
+}
+
+#profile-additional-info-box {
+    border: 2px solid coral;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.additional-info-mini-box {
+    width: 31%;
+    background-color: white;
+
+}
+
+.additional-info-title {
+    font-size: 20px;
+    font-weight: bold;
+    /*border: 2px solid orangered;*/
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.additional-info-text {
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 5px;
+    /*font-weight: bold;*/
+    font-size: 18px;
+    line-height: 1.6;
+    /*border-bottom: 1px solid silver;*/
+}
+
+#profile-info-address-box {
+
+}

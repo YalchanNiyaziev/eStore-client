@@ -33,7 +33,7 @@
 }
 #search-input {
     height: 32px;
-    width: 600px;
+    width: 90%;
     border: 0;
     border-radius: 2px 0 0 2px;
 }
@@ -41,7 +41,7 @@
 #search-button {
     padding: 0;
     height: 34px;
-    width: 40px;
+    width: 10%;
     background-color: white;
     margin-left: 0;
     box-shadow: none;
@@ -54,12 +54,14 @@
     color: white;
 }
 #form-wrapper{
-    display: block;
     text-align: center;
     margin-left: 150px;
+    width: 700px;
 }
 .form {
 margin: 15px 40px;
+    display: flex;
+
 }
 .text{
     color: white;
