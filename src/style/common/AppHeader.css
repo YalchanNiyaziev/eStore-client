@@ -13,6 +13,7 @@
 
 .wrapper {
     border: 1px solid white;
+    height: 100%;
 }
 
 .icon {
@@ -30,6 +31,7 @@
 #logo{
     width: 250px;
     margin-left: 10px;
+    border: 1px solid white;
 }
 #search-input {
     height: 32px;
@@ -82,4 +84,9 @@ margin: 15px 40px;
 
 #cart-wrapper{
     width: 200px;
+}
+#header-nav-menu{
+    position: absolute;
+    top: 60px;
+    left: 70px;
 }

@@ -281,11 +281,11 @@ export default class Home extends React.Component {
         return (
             <>
                 <AppHeader/>
-                {/*<Main/>*/}
+                <Main/>
                 {/*{this.displayAllOrOnlySelected()}*/}
                 {/*<TodoList/>*/}
                 {/*<Cart/>*/}
-                <Profile/>
+                {/*<Profile/>*/}
                 <AppFooter/>
             </>
         );

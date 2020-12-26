@@ -5,7 +5,9 @@
     display: flex;
     flex-wrap: wrap;
     /*justify-content: center;*/
+    background-color: #e9ebee;
 }
 .pr-card{
     width: 23%;
+    padding: 10px;
 }
