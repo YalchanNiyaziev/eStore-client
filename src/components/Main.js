@@ -16,68 +16,11 @@ import {faHome} from "@fortawesome/free-solid-svg-icons/faHome";
 import SubMenu from "./navigation/SubMenu";
 
 
-function createMenuElements() {
-    const menuNavElements = [];
-    const phoneAndTabletsElement = {
-        icon: faMobileAlt,
-        text: "Телефони и таблети"
-    };
-    const laptopsAndPcElement = {
-        icon: faLaptop,
-        text: "Лаптопи, компютри и периферия"
-    };
-    const tvAudioAndElectronicsElement = {
-        icon: faTv,
-        text: "ТВ, аудио и електроника"
-    };
-    const appliancesElement = {
-        icon: faDoorClosed,
-        text: "Големи електроуреди"
-    };
-    const smallAppliancesElement = {
-        icon: faBlender,
-        text: "Малки електроуреди"
-    };
-
-    const sportElement = {
-        icon: faTableTennis,
-        text: "Спорт и хоби"
-    };
-    const photoAndVideoElement = {
-        icon: faCamera,
-        text: "Фото и видео"
-    };
-    const homeElement = {
-        icon: faHome,
-        text: "Дом и градина"
-    }
-    const automativeElement = {
-        icon: faCar,
-        text: "Ауто"
-    };
-    const booksElement = {
-        icon: faBook,
-        text: "Книги"
-    }
-    menuNavElements.push(phoneAndTabletsElement);
-    menuNavElements.push(laptopsAndPcElement);
-    menuNavElements.push(tvAudioAndElectronicsElement);
-    menuNavElements.push(appliancesElement);
-    menuNavElements.push(smallAppliancesElement);
-    menuNavElements.push(sportElement);
-    menuNavElements.push(photoAndVideoElement);
-    menuNavElements.push(homeElement);
-    menuNavElements.push(automativeElement);
-    menuNavElements.push(booksElement);
-
-    return menuNavElements;
-}
 
 export default class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isSubmenuAccessible: false,
             pictureId: [1, 2, 3, 4],
             homePictures: [
                 {
@@ -103,20 +46,11 @@ export default class Main extends React.Component {
             ],
             displayPictureIndex: 0
         }
-        this.updateSubMenuAccessible = this.updateSubMenuAccessible.bind(this);
         this.handleOnClickPrevImage = this.handleOnClickPrevImage.bind(this);
         this.handleOnClickNextImage = this.handleOnClickNextImage.bind(this);
     }
 
-    renderSubMenu() {
-        if (this.state.isSubmenuAccessible) {
-            return <SubMenu/>
-        }
-    }
 
-    updateSubMenuAccessible(newState) {
-        this.setState({isSubmenuAccessible: newState})
-    }
 
     handleOnClickPrevImage(event) {
         this.setState(prevState => {
@@ -167,16 +101,13 @@ export default class Main extends React.Component {
 
     render() {
 
-        const menuNavElements = createMenuElements();
-        console.log("render main")
         return (
             <div id="main-container">
                 <div id="main-top-container">
-                    <div id="main-menu-nav-text">Категории продукти</div>
+                    <p id="main-menu-nav-text">Категории продукти</p>
                     <div id="picture-menu-nav-container">
                         <div id="main-top-nav-container">
-                            <MenuNavigation subMenuAccess={this.updateSubMenuAccessible}
-                                            menuElements={menuNavElements}/>
+                            <MenuNavigation/>
                         </div>
                         <div id="main-pictures-container"  onClick={()=>{
                             console.log("Image selected")
@@ -196,7 +127,6 @@ export default class Main extends React.Component {
                                             onClick={this.handleOnClickNextImage}>&#10095;</button>
 
 
-                            {this.renderSubMenu()}
                         </div>
 
                     </div>

@@ -3,11 +3,46 @@
 /*    background: blue;*/
 /*}*/
 #sub-menu-container{
-    border: 2px solid black;
-    width: 95%;
-    height: 95% ;
-    position: absolute;
-    top: 5px;
-    left: 15px;
+    /*border: 2px solid black;*/
+
+    margin-left: 20px;
+    width: 1000px;
+    min-height: 300px;
+    max-height: 500px;
+    opacity: 0.9;
     background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border: 1px solid #abc8a7;
+    column-count: 4;
+    column-gap: 20px;
+    column-fill: auto;
+    /*column-span: none;*/
+    padding: 10px;
+    /*column-span: none;*/
+    /*column-rule-width: 80px;*/
+    /*column-rule-width: 100px;*/
+
+}
+.sub-category-title{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.sub-category-box{
+
+    /*display: inline-block;*/
+    /*max-height: 100%;*/
+    /*width: 150px;*/
+    /*display: inline-block;*/
+    text-align: left;
+    /*border: 5px solid blue;*/
+    padding: 10px;
+    /*margin: 10px;*/
+    /*float: left;*/
+    /*display: inline-block;*/
+}
+.sub-category-name{
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
 }

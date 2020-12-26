@@ -20,88 +20,22 @@ import {faBook} from "@fortawesome/free-solid-svg-icons/faBook";
 import SubMenu from "../navigation/SubMenu";
 import MenuNavigation from "../navigation/MenuNavigation";
 
-function createMenuElements() {
-    const menuNavElements = [];
-    const phoneAndTabletsElement = {
-        icon: faMobileAlt,
-        text: "Телефони и таблети"
-    };
-    const laptopsAndPcElement = {
-        icon: faLaptop,
-        text: "Лаптопи, компютри и периферия"
-    };
-    const tvAudioAndElectronicsElement = {
-        icon: faTv,
-        text: "ТВ, аудио и електроника"
-    };
-    const appliancesElement = {
-        icon: faDoorClosed,
-        text: "Големи електроуреди"
-    };
-    const smallAppliancesElement = {
-        icon: faBlender,
-        text: "Малки електроуреди"
-    };
-
-    const sportElement = {
-        icon: faTableTennis,
-        text: "Спорт и хоби"
-    };
-    const photoAndVideoElement = {
-        icon: faCamera,
-        text: "Фото и видео"
-    };
-    const homeElement = {
-        icon: faHome,
-        text: "Дом и градина"
-    }
-    const automativeElement = {
-        icon: faCar,
-        text: "Ауто"
-    };
-    const booksElement = {
-        icon: faBook,
-        text: "Книги"
-    }
-    menuNavElements.push(phoneAndTabletsElement);
-    menuNavElements.push(laptopsAndPcElement);
-    menuNavElements.push(tvAudioAndElectronicsElement);
-    menuNavElements.push(appliancesElement);
-    menuNavElements.push(smallAppliancesElement);
-    menuNavElements.push(sportElement);
-    menuNavElements.push(photoAndVideoElement);
-    menuNavElements.push(homeElement);
-    menuNavElements.push(automativeElement);
-    menuNavElements.push(booksElement);
-
-    return menuNavElements;
-}
 
 class AppHeader extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMenuAccessible: false,
-            isSubmenuAccessible: false
+            isMenuAccessible: false
         }
-        this.updateSubMenuAccessible = this.updateSubMenuAccessible.bind(this);
         this.updateMenuAccessible = this.updateMenuAccessible.bind(this);
 
     }
 
-    updateSubMenuAccessible(newState) {
-        this.setState({isSubmenuAccessible: newState})
-    }
 
     updateMenuAccessible(newState) {
         this.setState({isMenuAccessible: newState})
     }
 
-    renderSubMenu() {
-        if (this.state.isSubmenuAccessible) {
-            return <SubMenu/>
-        }
-    }
 
     handleNavMenuMouseOver(event) {
         this.setState({isMenuAccessible: true})
@@ -111,28 +45,26 @@ class AppHeader extends React.Component {
         this.setState({isMenuAccessible: false})
     }
 
-    showMenu(menuNavElements) {
+    showMenu() {
         if (this.state.isMenuAccessible) {
             return (<MenuNavigation
                 menuAccess={this.updateMenuAccessible}
-                subMenuAccess={this.updateSubMenuAccessible}
-                menuElements={menuNavElements}/>)
+                />)
         }
     }
 
     render() {
-        const menuNavElements = createMenuElements();
         return (
             <div id="header-container">
+                <div id="drop-down-menu">
                 <div className="wrapper" onMouseOver={this.handleNavMenuMouseOver.bind(this)}
                     // onMouseOut={this.handleNavMenuMouseOut.bind(this)}
                 >
                     <FontAwesomeIcon className="icon" icon={faBars} size="2x"/>
                 </div>
-                <div id="header-nav-menu" onMouseOut={() => {
-                    this.setState({isMenuAccessible: false})
-                }}>
-                    {this.showMenu(menuNavElements)}
+                <div id="header-nav-menu" onMouseOut={this.handleNavMenuMouseOut.bind(this)}>
+                    {this.showMenu()}
+                </div>
                 </div>
                 {/*<Link to="/">*/}
                     <div id="logo" className="wrapper">
