@@ -9,7 +9,7 @@
     width: 1000px;
     min-height: 300px;
     max-height: 500px;
-    opacity: 0.9;
+    opacity: 0.8;
     background-color: white;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     border: 1px solid #abc8a7;
@@ -22,6 +22,9 @@
     /*column-rule-width: 80px;*/
     /*column-rule-width: 100px;*/
 
+}
+#sub-menu-container:hover{
+    opacity: 1;
 }
 .sub-category-title{
     font-weight: bold;
@@ -45,4 +48,7 @@
     font-size: 16px;
     cursor: pointer;
     padding: 5px;
+}
+.sub-category-name:hover{
+    color: orangered;
 }

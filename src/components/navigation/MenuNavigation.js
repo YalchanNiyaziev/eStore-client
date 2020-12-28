@@ -377,15 +377,17 @@ export default class MenuNavigation extends React.Component {
     }
 
     handleOnMouseOut(event) {
+        // console.log(" Menu Mouse out event"+event);
         event.stopPropagation();
-        console.log(event);
-        this.updateSubMenuAccessible(false);
     }
 
     handleOnMouseLeave(event) {
+        // event.stopPropagation();
+        // console.log("Menu Mouse leave event"+event);
         if (this.props.menuAccess) {
             this.props.menuAccess(false);
         }
+        this.updateSubMenuAccessible(false);
     }
 
     updateSubMenuAccessible(newState) {
@@ -394,7 +396,10 @@ export default class MenuNavigation extends React.Component {
 
     renderSubMenu() {
         if (this.state.isSubmenuAccessible) {
-            return <SubMenu subCategories={this.state.subCategories}/>
+            return <SubMenu
+                subCategories={this.state.subCategories}
+                updateSubMenuStatus = {this.updateSubMenuAccessible}
+            />
         }
     }
 
@@ -402,14 +407,22 @@ export default class MenuNavigation extends React.Component {
 
         return (
 
-            <div id="nav-main-container-box">
-                <div id="navigation-container" onMouseLeave={this.handleOnMouseLeave}>
+            <div id="nav-main-container-box"
+                 onMouseOut={this.handleOnMouseOut}
+                onMouseLeave={this.handleOnMouseLeave}
+
+            >
+                <div id="navigation-container"
+                     // onMouseLeave={this.handleOnMouseLeave}
+                    // onMouseOut={this.handleOnMouseOut}
+                >
                     <ul>
                         {this.state.menuElements.map((e, index) => {
                             return (
                                 // <Link to="/product">
                                 <li className="nav-element" key={index} onMouseOver={this.handleOnMouseOver}
-                                    onMouseOut={this.handleOnMouseOut}>
+                                    // onMouseOut={this.handleOnMouseOut}
+                                >
                                     <div className="menu-nav-icon">
                                         <FontAwesomeIcon icon={e.icon}/>
                                     </div>

@@ -281,8 +281,8 @@ export default class Home extends React.Component {
         return (
             <>
                 <AppHeader/>
-                <Main/>
-                {/*{this.displayAllOrOnlySelected()}*/}
+                {/*<Main/>*/}
+                {this.displayAllOrOnlySelected()}
                 {/*<TodoList/>*/}
                 {/*<Cart/>*/}
                 {/*<Profile/>*/}
