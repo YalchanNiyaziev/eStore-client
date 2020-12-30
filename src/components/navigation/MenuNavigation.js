@@ -14,6 +14,7 @@ import {faCar} from "@fortawesome/free-solid-svg-icons/faCar";
 import {faBook} from "@fortawesome/free-solid-svg-icons/faBook";
 import SubMenu from "./SubMenu";
 import '../../style/navigation/SubMenu.css';
+import {Link} from "react-router-dom";
 
 
 // import {Link} from "react-router-dom";
@@ -368,11 +369,11 @@ export default class MenuNavigation extends React.Component {
     handleOnMouseOver(event) {
         const selectedCategoryText = event.target.innerText;
         const selectedCategory = this.state.menuElements.filter(e => e.text === selectedCategoryText);
-        if(selectedCategory.length !== 1 ){
+        if (selectedCategory.length !== 1) {
             return;
         }
         const selectedSubCategories = selectedCategory[0].subCategories;
-        this.setState({subCategories:selectedSubCategories});
+        this.setState({subCategories: selectedSubCategories});
         this.updateSubMenuAccessible(true);
     }
 
@@ -398,7 +399,7 @@ export default class MenuNavigation extends React.Component {
         if (this.state.isSubmenuAccessible) {
             return <SubMenu
                 subCategories={this.state.subCategories}
-                updateSubMenuStatus = {this.updateSubMenuAccessible}
+                updateSubMenuStatus={this.updateSubMenuAccessible}
             />
         }
     }
@@ -409,25 +410,25 @@ export default class MenuNavigation extends React.Component {
 
             <div id="nav-main-container-box"
                  onMouseOut={this.handleOnMouseOut}
-                onMouseLeave={this.handleOnMouseLeave}
+                 onMouseLeave={this.handleOnMouseLeave}
 
             >
                 <div id="navigation-container"
-                     // onMouseLeave={this.handleOnMouseLeave}
+                    // onMouseLeave={this.handleOnMouseLeave}
                     // onMouseOut={this.handleOnMouseOut}
                 >
                     <ul>
                         {this.state.menuElements.map((e, index) => {
                             return (
-                                // <Link to="/product">
-                                <li className="nav-element" key={index} onMouseOver={this.handleOnMouseOver}
-                                    // onMouseOut={this.handleOnMouseOut}
-                                >
-                                    <div className="menu-nav-icon">
-                                        <FontAwesomeIcon icon={e.icon}/>
-                                    </div>
-                                    <div className="menu-nav-text">{e.text}</div>
-                                </li>
+                                // <Link to={'/products/'+this.state.menuElements.text} >
+                                    <li className="nav-element" key={index} onMouseOver={this.handleOnMouseOver}
+                                        // onMouseOut={this.handleOnMouseOut}
+                                    >
+                                        <div className="menu-nav-icon">
+                                            <FontAwesomeIcon icon={e.icon}/>
+                                        </div>
+                                        <div className="menu-nav-text">{e.text}</div>
+                                    </li>
                                 // </Link>
                             )
                         })}

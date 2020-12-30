@@ -2,6 +2,9 @@
 /*    z-index: 9;*/
 /*    background: blue;*/
 /*}*/
+a{
+    text-decoration: none;
+}
 #sub-menu-container{
     /*border: 2px solid black;*/
 
@@ -48,6 +51,7 @@
     font-size: 16px;
     cursor: pointer;
     padding: 5px;
+    color: #2f2f2f;
 }
 .sub-category-name:hover{
     color: orangered;

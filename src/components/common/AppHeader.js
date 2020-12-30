@@ -19,6 +19,7 @@ import {faCar} from "@fortawesome/free-solid-svg-icons/faCar";
 import {faBook} from "@fortawesome/free-solid-svg-icons/faBook";
 import SubMenu from "../navigation/SubMenu";
 import MenuNavigation from "../navigation/MenuNavigation";
+import {Link} from "react-router-dom";
 
 
 class AppHeader extends React.Component {
@@ -66,10 +67,10 @@ class AppHeader extends React.Component {
                     {this.showMenu()}
                 </div>
                 </div>
-                {/*<Link to="/">*/}
+                <Link to="/">
                     <div id="logo" className="wrapper">
                     </div>
-                {/*</Link>*/}
+                </Link>
                 <div id="form-wrapper" className="wrapper">
                     <form className="form">
                         <input type="text" id="search-input" placeholder="Търсене" name="searchingWord"/>
@@ -84,10 +85,10 @@ class AppHeader extends React.Component {
                 </div>
 
                 <div id="cart-wrapper" className="wrapper">
-                    {/*<Link to="/cart">*/}
+                    <Link to="/cart">
                         <FontAwesomeIcon className="icon-user" icon={faShoppingCart}/>
                         <div className="text">Моята количка</div>
-                    {/*</Link>*/}
+                    </Link>
                 </div>
                 {/*{this.renderSubMenu()}*/}
             </div>

@@ -1,18 +1,19 @@
 import React from 'react';
 import '../../style/product/ProductItem.css';
+import {NavLink} from "react-router-dom";
 
 export default function ProductItem(props) {
     return (
-        <div key={props.key} className="product-card" onClick={()=>{props.selectProduct(props.id)}}>
+        <div className="product-card" >
             <div className="product-card-top">
                 <div className="product-card-img">
                     <img src={props.product.images[0]} alt={props.product.alt}/>
                 </div>
             </div>
-            <div className="product-card-mid">
-                <p className="product-card-name">
+            <div className="product-card-mid" onClick={()=>{props.selectProduct(props.id)}}>
+                <NavLink activeClassName="product-card-name" to={'/products/category/'+props.id}>
                     {props.product.name}
-                </p>
+                </NavLink>
             </div>
             <div className="product-card-btn">
                 <p className="product-card-btn-price">
