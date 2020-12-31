@@ -18,10 +18,10 @@ export default function SubMenu(props) {
                         {s.elements.map((e, i) => {
                             return (
                                 <span key={i}>
-                                <NavLink to={'/products/'+e}
+                                <NavLink to={'/products/'+e.name}
                                          // activeClassName={"sub-category-name"}
                                 >
-                                    <p  className="sub-category-name">{e}</p>
+                                    <p  className="sub-category-name">{e.text}</p>
                                 </NavLink>
                                 </span>
                             )

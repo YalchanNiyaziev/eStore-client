@@ -29,23 +29,67 @@ function createMenuElements() {
             {
                 title: "Мобилни телефони и аксесоари",
                 elements: [
-                    "Мобилни телефони",
-                    "Кълъфи",
-                    "Протектори",
-                    "Зарядни",
-                    "Кабели",
-                    "Външни батерии",
-                    "Други аксесоари"
+                    {
+                        name: "smart-phones",
+                        text: "Мобилни телефони"
+                    },
+                    {
+                        name: "smart-phone-cases",
+                        text: "Кълъфи"
+                    },
+                    {
+                        name: "smart-phone-protectors",
+                        text: "Протектори"
+                    },
+                    {
+                        name: "smart-phone-chargers",
+                        text: "Зарядни"
+                    },
+                    {
+                        name: "smart-phone-cables",
+                        text: "Кабели"
+                    },
+                    {
+                        name: "smart-phone-powerbank",
+                        text: "Външни батерии"
+                    },
+                    {
+                        name: "smart-phone-powerbank",
+                        text: "Външни батерии"
+                    },
+                    {
+                        name: "smart-phone-other-accessories",
+                        text: "Други аксесоари"
+                    }
                 ]
             },
             {
                 title: "Таблети и аксесоари",
                 elements: [
-                    "Таблети",
-                    "Кълъфи",
-                    "Зарядни",
-                    "Кабели",
-                    "Други аксесоари"
+                    {
+                        name: "tablets",
+                        text: "Таблети"
+                    },
+                    {
+                        name: "tablet-cases",
+                        text: "Кълъфи"
+                    },
+                    {
+                        name: "tablet-charges",
+                        text: "Зарядни"
+                    },
+                    {
+                        name: "tablet-charges",
+                        text: "Зарядни"
+                    },
+                    {
+                        name: "tablet-cables",
+                        text: "Кабели"
+                    },
+                    {
+                        name: "tablet-other-accessories",
+                        text: "Други аксесоари"
+                    }
                 ]
             }
         ]
@@ -57,65 +101,183 @@ function createMenuElements() {
             {
                 title: "Лаптопи и аксесоари",
                 elements: [
-                    "Лаптопи",
-                    "Чанти",
-                    "Раници",
-                    "Кабели",
-                    "Батерия",
-                    "Други аксесоари"
+                    {
+                        name: "laptops",
+                        text: "Лаптопи"
+                    },
+                    {
+                        name: "laptop-bags",
+                        text: "Чанти"
+                    },
+                    {
+                        name: "laptop-backpacks",
+                        text: "Раници"
+                    },
+                    {
+                        name: "laptop-cables",
+                        text: "Кабели"
+                    },
+                    {
+                        name: "laptop-battery",
+                        text: "Батерия"
+                    },
+                    {
+                        name: "laptop-other-accessories",
+                        text: "Батерия"
+                    }
                 ]
             },
             {
                 title: "Компютри и компоненти",
                 elements: [
-                    "Настолни компютри",
-                    "Процесори",
-                    "Видео карти",
-                    "Дънни платки",
-                    "Оперативна памет",
-                    "Хард дискове",
-                    "Компютърни кутии",
-                    "Захранващи блокове",
-                    "Solid-state drives (SSD)",
-                    "Звукови платки",
-                    "Други компоненти"
+                    {
+                        name: "computers",
+                        text: "Настолни компютри"
+                    },
+                    {
+                        name: "processors",
+                        text: "Процесори"
+                    },
+                    {
+                        name: "video-cards",
+                        text: "Видео карти"
+                    },
+                    {
+                        name: "motherboards",
+                        text: "Дънни платки"
+                    },
+                    {
+                        name: "ram",
+                        text: "Оперативна памет"
+                    },
+                    {
+                        name: "hdd",
+                        text: "Хард дискове"
+                    },
+                    {
+                        name: "computer-cases",
+                        text: "Компютърни кутии"
+                    },
+                    {
+                        name: "power-supplies",
+                        text: "Захранващи блокове"
+                    },
+                    {
+                        name: "ssd",
+                        text: "Solid-state drives (SSD)"
+                    },
+                    {
+                        name: "sound-cards",
+                        text: "Звукови платки"
+                    },
+                    {
+                        name: "pc-other-components",
+                        text: "Други компоненти"
+                    }
                 ]
             }, {
                 title: "Монитори и аксесоари",
                 elements: [
-                    "Монитори",
-                    "Аксесоари за монитори"
+                    {
+                        name: "monitors",
+                        text: "Монитори"
+                    },
+                    {
+                        name: "monitor-accessories",
+                        text: "Аксесоари за монитори"
+                    }
                 ]
             }, {
                 title: "Софтуер",
                 elements: [
-                    "Офис приложения",
-                    "Настолни приложения",
-                    "Операционни системи",
-                    "Антивирусни приложения",
-                    "Други приложения"
+                    {
+                        name: "software-office",
+                        text: "Офис приложения"
+                    },
+                    {
+                        name: "software-desktop",
+                        text: "Настолни приложения"
+                    },
+                    {
+                        name: "software-os",
+                        text: "Операционни системи"
+                    },
+                    {
+                        name: "software-os",
+                        text: "Операционни системи"
+                    },
+                    {
+                        name: "software-antivirus",
+                        text: "Антивирусни приложения"
+                    },
+                    {
+                        name: "software-others",
+                        text: "Други приложения"
+                    }
                 ]
             }, {
                 title: "Принтери и скенери",
                 elements: [
-                    "Лазерни принтери",
-                    "Мастиленоструйни принтери",
-                    "Скенери",
-                    "Касети тонери и други консумативи"
+                    {
+                        name: "laser-printers",
+                        text: "Лазерни принтери"
+                    },
+                    {
+                        name: "inject-printers",
+                        text: "Мастиленоструйни принтери"
+                    },
+                    {
+                        name: "scanners",
+                        text: "Скенери"
+                    },
+                    {
+                        name: "printer-consumables",
+                        text: "Касети тонери и други консумативи"
+                    }
                 ]
             }, {
                 title: "Периферия",
                 elements: [
-                    "Мишки",
-                    "Клавиатури",
-                    "Рутери",
-                    "Суичове",
-                    "USB памет",
-                    "Външчни хард дискове",
-                    "Външни SSD",
-                    "Тонколони",
-                    "Слушалки",
-                    "Уеб камери"
+                    {
+                        name: "printer-consumables",
+                        text: "Мишки"
+                    },
+                    {
+                        name: "printer-consumables",
+                        text: "Клавиатури"
+                    },
+                    {
+                        name: "printer-consumables",
+                        text: "Рутери"
+                    },
+                    {
+                        name: "printer-consumables",
+                        text: "Суичове"
+                    },
+                    {
+                        name: "printer-consumables",
+                        text: "USB памет"
+                    },
+                    {
+                        name: "printer-consumables",
+                        text: "Външчни хард дискове"
+                    },
+                    {
+                        name: "printer-consumables",
+                        text: "Външни SSD"
+                    },
+                    {
+                        name: "pc-speakers",
+                        text: "Тонколони"
+                    },
+                    {
+                        name: "headphones",
+                        text: "Слушалки"
+                    },
+                    {
+                        name: "web-camera",
+                        text: "Уеб камери"
+                    }
                 ]
             }
         ]
@@ -126,16 +288,40 @@ function createMenuElements() {
         subCategories: [
             {
                 title: "Телевизори и аксесоари",
-                elements: ["Телевизори", "Аксесоари"]
-            }, {
+                elements: [
+                    {
+                        name: "tv",
+                        text: "Телевизори"
+                    },
+                    {
+                        name: "tv-accessories",
+                        text: "Аксесоари"
+                    }
+                ]
+            },
+            {
                 title: "Аудио",
                 elements: [
-                    "Системи за домашно кино",
-                    "Аудио системи",
-                    "Мултимедийни системи",
-                    "Тонколони",
-                    "Плейъри",
-                    "Други"
+                    {
+                        name: "home-cinema",
+                        text: "Системи за домашно кино"
+                    },
+                    {
+                        name: "audio-systems",
+                        text: "Аудио системи"
+                    },
+                    {
+                        name: "multimedia-systems",
+                        text: "Мултимедийни системи"
+                    },
+                    {
+                        name: "speakers",
+                        text: "Тонколони"
+                    },
+                    {
+                        name: "audio-others",
+                        text: "Други"
+                    }
                 ]
             }
         ]
@@ -146,29 +332,99 @@ function createMenuElements() {
         subCategories: [
             {
                 title: "Хладилна техника",
-                elements: ["Хладилници", "Халдилни витрини", "Фризери", "Фризерни ракли"]
+                elements: [
+                    {
+                        name: "refrigerators",
+                        text: "Хладилници"
+                    },
+                    {
+                        name: "cooler-showcase",
+                        text: "Хладилни витрини"
+                    },
+                    {
+                        name: "freezers",
+                        text: "Фризери"
+                    },
+                    {
+                        name: "freezer-chests",
+                        text: "Фризерни ракли"
+                    }
+                ]
             },
             {
                 title: "Пералня техника",
-                elements: ["Перални", "Сушилни"]
+                elements: [
+                    {
+                        name: "laundry",
+                        text: "Перални"
+                    },
+                    {
+                        name: "dryers",
+                        text: "Сушилни"
+                    }
+                ]
             },
             {
                 title: "Съдомиялна техника",
-                elements: ["Съдомиялни машини"]
+                elements: [
+                    {
+                        name: "dishwashers",
+                        text: "Съдомиялни машини"
+                    }
+                ]
             },
             {
                 title: "Готварски печки",
-                elements: ["Готварска печка", "Котлони", "Електрически фурни", "Миктовълнови фурни", "Абсорматори"]
+                elements: [
+                    {
+                        name: "cookers",
+                        text: "Готварска печка"
+                    },
+                    {
+                        name: "hobs",
+                        text: "Котлони"
+                    },
+                    {
+                        name: "electric-ovens",
+                        text: "Електрически фурни"
+                    },
+                    {
+                        name: "microwave-ovens",
+                        text: "Микровълнови фурни"
+                    },
+                    {
+                        name: "hoods",
+                        text: "Абсорбатори"
+                    }
+                ]
             },
             {
                 title: "Бойлери, климатици и уреди за отопление",
                 elements: [
-                    "Климатици",
-                    "Електрически конвертори",
-                    "Вентилаторни Печки",
-                    "Бойлери",
-                    "Електрически камини",
-                    "Електрически радиатори"
+                    {
+                        name: "air-conditioners",
+                        text: "Климатици"
+                    },
+                    {
+                        name: "electric-converters",
+                        text: "Електрически конвертори"
+                    },
+                    {
+                        name: "fan-stoves",
+                        text: "Вентилаторни печки"
+                    },
+                    {
+                        name: "boilers",
+                        text: "Бойлери"
+                    },
+                    {
+                        name: "electric-fireplaces",
+                        text: "Електрически камини"
+                    },
+                    {
+                        name: "electric-radiators",
+                        text: "Електрически радиатори"
+                    }
                 ]
             },
         ]
@@ -180,31 +436,72 @@ function createMenuElements() {
             {
                 title: "Прахосмукачки и ютии",
                 elements: [
-                    "Прахосмукачки",
-                    "Ютии",
-                    "Шевни машини",
-                    "Дъски за гладене"
+                    {
+                        name: "vacuum-cleaners",
+                        text: "Прахосмукачки"
+                    },
+                    {
+                        name: "Финанси и счетоводство",
+                        text: "Ютии"
+                    },
+                    {
+                        name: "sewing-machines",
+                        text: "Шевни машини"
+                    },
+                    {
+                        name: "ironing-boards",
+                        text: "Дъски за гладене"
+                    }
                 ]
             },
             {
                 title: "Машини за напитки",
                 elements: [
-                    "Кафе автомати и еспресо машини",
-                    "Кафемашини",
-                    "Кафемелачки",
-                    "Сокоизтисквачки"
+                    {
+                        name: "espresso-machines",
+                        text: "Кафе автомати и еспресо машини"
+                    },
+                    {
+                        name: "coffee-machines",
+                        text: "Кафемашини"
+                    },
+                    {
+                        name: "coffee-grinders",
+                        text: "Кафемелачки"
+                    },
+                    {
+                        name: "juicers",
+                        text: "Сокоизтисквачки"
+                    }
                 ]
             },
             {
                 title: "Кухненски уреди",
                 elements: [
-                    "Електрически скари",
-                    "Фритюрници",
-                    "Хлебопекарни",
-                    "Миксери",
-                    "Пасатори",
-                    "Блендери",
-                    "Тостери"
+                    {
+                        name: "electric-grills",
+                        text: "Електрически скари"
+                    },
+                    {
+                        name: "deep-fryers",
+                        text: "Фритюрници"
+                    },
+                    {
+                        name: "bakeries",
+                        text: "Хлебопекарни"
+                    },
+                    {
+                        name: "mixers",
+                        text: "Миксери"
+                    },
+                    {
+                        name: "blenders",
+                        text: "Блендери"
+                    },
+                    {
+                        name: "toasters",
+                        text: "Тостери"
+                    }
                 ]
             }
         ]
@@ -217,28 +514,64 @@ function createMenuElements() {
             {
                 title: "Конзоли",
                 elements: [
-                    "Playstation",
-                    "Nintendo",
-                    "Xbox"
+                    {
+                        name: "playstation",
+                        text: "Playstation"
+                    },
+                    {
+                        name: "nintendo",
+                        text: "Nintendo"
+                    },
+                    {
+                        name: "xbox",
+                        text: "Xbox"
+                    }
                 ]
             },
             {
                 title: "Игри",
                 elements: [
-                    "Конзолни",
-                    "Настолни",
-                    "Компютърни"
+                    {
+                        name: "games-console",
+                        text: "Конзолни"
+                    },
+                    {
+                        name: "games-board",
+                        text: "Настолни"
+                    },
+                    {
+                        name: "games-pc",
+                        text: "Компютърни"
+                    }
                 ]
             },
             {
                 title: "Фитнес",
                 elements: [
-                    "Велоергометри",
-                    "Бягащи пътеки",
-                    "Гребни тренажори",
-                    "Тежести",
-                    "Гири и дъмбели",
-                    "Фитнес уреди"
+                    {
+                        name: "fitness-ergometers",
+                        text: "Велоергометри"
+                    },
+                    {
+                        name: "fitness-treadmills",
+                        text: "Бягащи пътеки"
+                    },
+                    {
+                        name: "fitness-rowing-machines",
+                        text: "Гребни тренажори"
+                    },
+                    {
+                        name: "fitness-weights",
+                        text: "Тежести"
+                    },
+                    {
+                        name: "fitness-dumbbells",
+                        text: "Гири и дъмбели"
+                    },
+                    {
+                        name: "fitness-equipment",
+                        text: "Фитнес уреди"
+                    }
                 ]
             }
         ]
@@ -250,20 +583,47 @@ function createMenuElements() {
             {
                 title: "Фотоапарати и аксесоари",
                 elements: [
-                    "DSLR фотоапарати",
-                    "Mirrorless фотоапарати",
-                    "Компактни фотоапарати",
-                    "Фотоапарати за моментни снимки",
-                    "Обективи"
+                    {
+                        name: "dslr",
+                        text: "DSLR фотоапарати"
+                    },
+                    {
+                        name: "mirrorless",
+                        text: "Mirrorless фотоапарати"
+                    },
+                    {
+                        name: "compact-cameras",
+                        text: "Компактни фотоапарати"
+                    },
+                    {
+                        name: "instant-cameras",
+                        text: "Фотоапарати за моментни снимки"
+                    },
+                    {
+                        name: "lenses",
+                        text: "Обективи"
+                    }
                 ]
             },
             {
                 title: "Видеокамери и аксесоари",
                 elements: [
-                    "Видеокамери",
-                    "Дронове",
-                    "Спортни видеокамери",
-                    "Други аксесоари"
+                    {
+                        name: "video-cameras",
+                        text: "Видеокамери"
+                    },
+                    {
+                        name: "drones",
+                        text: "Дронове"
+                    },
+                    {
+                        name: "sport-cameras",
+                        text: "Спортни видеокамери"
+                    },
+                    {
+                        name: "video-others",
+                        text: "Други аксесоари"
+                    }
                 ]
             }
         ]
@@ -275,17 +635,50 @@ function createMenuElements() {
             {
                 title: "Мебели и декорации",
                 elements: [
-                    "Дивани",
-                    "Соални комплекти",
-                    "Гардероби",
-                    "Маси",
-                    "Фотьоли",
-                    "Столове",
-                    "Килими",
-                    "Пердета",
-                    "Възглавници",
-                    "Одеяла",
-                    "Спално бельо"
+                    {
+                        name: "home-sofas",
+                        text: "Дивани"
+                    },
+                    {
+                        name: "home-bedding",
+                        text: "Спални комплекти"
+                    },
+                    {
+                        name: "home-wardrobes",
+                        text: "Гардероби"
+                    },
+                    {
+                        name: "home-tables",
+                        text: "Маси"
+                    },
+                    {
+                        name: "home-armchairs",
+                        text: "Фотьоли"
+                    },
+                    {
+                        name: "home-chairs",
+                        text: "Столове"
+                    },
+                    {
+                        name: "home-carpets",
+                        text: "Килими"
+                    },
+                    {
+                        name: "home-curtains",
+                        text: "Пердета"
+                    },
+                    {
+                        name: "home-pillows",
+                        text: "Възглавници"
+                    },
+                    {
+                        name: "home-blankets",
+                        text: "Одеяла"
+                    },
+                    {
+                        name: "home-sleepwear",
+                        text: "Спално бельо"
+                    }
                 ]
             }
         ]
@@ -296,11 +689,26 @@ function createMenuElements() {
         subCategories: [{
             title: "Авто техника",
             elements: [
-                "Навигационни системи",
-                "CD и DVD плейъри",
-                "Субуфери и тонколони",
-                "Видеорегистратори",
-                "Автомобилни гуми"
+                {
+                    name: "auto-gps",
+                    text: "Навигационни системи"
+                },
+                {
+                    name: "auto-audio",
+                    text: "CD и DVD плейъри"
+                },
+                {
+                    name: "auto-speakers",
+                    text: "Субуфери и тонколони"
+                },
+                {
+                    name: "auto-videorecorder",
+                    text: "Видеорегистратори"
+                },
+                {
+                    name: "auto-tyres",
+                    text: "Автомобилни гуми"
+                }
             ]
         }]
     };
@@ -310,23 +718,74 @@ function createMenuElements() {
         subCategories: [{
             title: "Книги",
             elements: [
-                "Астрология",
-                "Архитектура",
-                "Детски книги",
-                "Дизайн",
-                "Изкуство",
-                "История",
-                "IT и информатика",
-                "Криминални романи",
-                "Маркетинг",
-                "Математика",
-                "Медицина и фармация",
-                "Мениджмънт",
-                "Наука и технология",
-                "Психология",
-                "Световни романи и повести",
-                "Фантастика и фентъзи",
-                "Финанси и счетоводство",
+                {
+                    name: "books-astrology",
+                    text: "Астрология"
+                },
+                {
+                    name: "books-architecture",
+                    text: "Архитектура"
+                },
+                {
+                    name: "books-kids",
+                    text: "Детски книги"
+                },
+                {
+                    name: "books-design",
+                    text: "Дизайн"
+                },
+                {
+                    name: "books-art",
+                    text: "Изкуство"
+                },
+                {
+                    name: "books-history",
+                    text: "История"
+                },
+                {
+                    name: "books-it",
+                    text: "IT и информатика"
+                },
+                {
+                    name: "books-criminal",
+                    text: "Криминални романи"
+                },
+                {
+                    name: "books-marketing",
+                    text: "Маркетинг"
+                },
+                {
+                    name: "books-math",
+                    text: "Математика"
+                },
+                {
+                    name: "books-medicine",
+                    text: "Медицина и фармация"
+                },
+                {
+                    name: "books-management",
+                    text: "Мениджмънт"
+                },
+                {
+                    name: "books-science",
+                    text: "Наука и технология"
+                },
+                {
+                    name: "books-psychology",
+                    text: "Психология"
+                },
+                {
+                    name: "books-classics",
+                    text: "Световни романи и повести"
+                },
+                {
+                    name: "books-fantasy",
+                    text: "Фантастика и фентъзи"
+                },
+                {
+                    name: "books-finance",
+                    text: "Финанси и счетоводство"
+                }
             ]
         },]
     }
@@ -421,14 +880,14 @@ export default class MenuNavigation extends React.Component {
                         {this.state.menuElements.map((e, index) => {
                             return (
                                 // <Link to={'/products/'+this.state.menuElements.text} >
-                                    <li className="nav-element" key={index} onMouseOver={this.handleOnMouseOver}
-                                        // onMouseOut={this.handleOnMouseOut}
-                                    >
-                                        <div className="menu-nav-icon">
-                                            <FontAwesomeIcon icon={e.icon}/>
-                                        </div>
-                                        <div className="menu-nav-text">{e.text}</div>
-                                    </li>
+                                <li className="nav-element" key={index} onMouseOver={this.handleOnMouseOver}
+                                    // onMouseOut={this.handleOnMouseOut}
+                                >
+                                    <div className="menu-nav-icon">
+                                        <FontAwesomeIcon icon={e.icon}/>
+                                    </div>
+                                    <div className="menu-nav-text">{e.text}</div>
+                                </li>
                                 // </Link>
                             )
                         })}

@@ -36,6 +36,7 @@ export default class Main extends React.Component {
             ],
 
         }
+        this.updateProductsState = this.updateProductsState.bind(this);
     }
 
     componentDidMount() {
@@ -263,16 +264,46 @@ export default class Main extends React.Component {
         productCollection.push(p11);
 
         console.log('make ajax and update state');
-        this.setState({
-                brands: ['LG', 'Samsung', 'Sony', 'AEG', 'Panasonic', 'Arcelik', 'kjbfnkjdfbvdfkvb', 'hsd       dddddssasdasdadzxzzhsgshs jagssgs lllk'],
-                priceMin: 900,
-                priceMax: 1500,
-                priceRangeStart: 900,
-                priceRangeEnd: 1500,
-                category: 'Мобилни телефони',
-                products: productCollection
+        fetch("http://localhost:8080/api/products/categories/79d22b06-27ec-4dc5-8511-10ab6ef1702b")
+            .then(response => response.json())
+            .then(this.updateProductsState)
+            .catch(console.log);
+
+        // this.setState({
+        //         brands: ['LG', 'Samsung', 'Sony', 'AEG', 'Panasonic', 'Arcelik', 'kjbfnkjdfbvdfkvb', 'hsd       dddddssasdasdadzxzzhsgshs jagssgs lllk'],
+        //         priceMin: 900,
+        //         priceMax: 1500,
+        //         priceRangeStart: 900,
+        //         priceRangeEnd: 1500,
+        //         category: 'Мобилни телефони',
+        //         products: productCollection
+        //     }
+       // )
+    }
+
+    updateProductsState(data){
+        const serverProductCollection=[];
+
+        data.forEach(e =>{
+            const product = {
+                images: e.pictures,
+                name: e.name,
+                price: e.price,
+                specifications: [{key: "", value: ""}],
+                description: e.description,
+                alt: ""
             }
-        )
+            serverProductCollection.push(product);
+        });
+        this.setState({
+            brands: ['LG', 'Samsung', 'Sony', 'AEG', 'Panasonic', 'Arcelik', 'kjbfnkjdfbvdfkvb', 'hsd       dddddssasdasdadzxzzhsgshs jagssgs lllk'],
+            priceMin: 900,
+            priceMax: 1500,
+            priceRangeStart: 900,
+            priceRangeEnd: 1500,
+            category: 'Мобилни телефони',
+            products: serverProductCollection
+        });
     }
 
     displayAllOrOnlySelected() {
